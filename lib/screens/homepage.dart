@@ -114,6 +114,7 @@ class _HomePageState extends State<HomePage> {
                           height: 40,
                           width: 120,
                           decoration: const BoxDecoration(
+
                             gradient: LinearGradient(
                               begin: Alignment.topLeft,
                               end:
@@ -124,6 +125,7 @@ class _HomePageState extends State<HomePage> {
                                 Color(0xffFF9900)
                               ],
                             ),
+                            // borderRadius: BorderRadius.circular(12),
                           ),
                           child: Center(
                             child: Text(
