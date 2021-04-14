@@ -188,10 +188,79 @@ class _HomePageState extends State<HomePage> {
             color: Colors.grey,
           ),
 
+          //Back Btn
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
 
+              Padding(
+                padding: const EdgeInsets.only(top: 100.0,),
+                child: Center(
+                  child: FlatButton(
+                    height: 48,
+                    minWidth: 150,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                        side: BorderSide(color: AppColors.primary_color)),
+                    color: Colors.transparent,
+                    textColor: AppColors.primary_color,
+                    padding: EdgeInsets.all(8.0),
 
+                    onPressed: () {
+                      // Navigator.push(context,
+                      //   MaterialPageRoute(builder: (context) => NewAppointmentPage()),);
+                    },
+                    child: Text(
+                      "Request",
+                      style: TextStyle(
+                          fontSize: 16.0, fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
 
+              //Next Btn
+              Padding(
+                padding: const EdgeInsets.only(top: 100.0),
+                child: GestureDetector(
+                  onTap: () {
+                    // Navigator.push(context,
+                    //   MaterialPageRoute(builder: (context) => OTPCodeVerification()),);
+                  },
+                  child: Container(
+                    height: 48,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end:
+                        Alignment(0.8, 0.0),
+                        // 10% of the width, so there are ten blinds.
+                        colors: <Color>[
+                          Color(0xff003CBE),
+                          Color(0xffFF9900)
+                        ],
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Pay",
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            fontFamily: 'Poppins',
+                            color: Colors.white
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
 
+            ],
+          ),
 
 
 
