@@ -31,6 +31,7 @@ dependencies:
   flutter_svg: any
   country_pickers: any
   pin_code_fields: any
+  persistent_bottom_nav_bar: any
 
 dev_dependencies:
   flutter_test:

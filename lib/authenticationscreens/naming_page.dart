@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:payment_app/authenticationscreens/selectcountry_page.dart';
+import 'package:payment_app/authenticationscreens/succes_page.dart';
 import 'package:payment_app/constant/custom_textfield.dart';
 
 class UsernamePage extends StatefulWidget {
@@ -62,8 +62,8 @@ class _UsernamePageState extends State<UsernamePage> {
             child: GestureDetector(
               onTap: ()
               {
-                // Navigator.push(context,
-                //   MaterialPageRoute(builder: (context) => VerifS()),);
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CongratsPage()),);
               },
               child: Container(
                 height: 52,
