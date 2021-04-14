@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_svg: any
   country_pickers: any
+  pin_code_fields: any
 
 dev_dependencies:
   flutter_test:
