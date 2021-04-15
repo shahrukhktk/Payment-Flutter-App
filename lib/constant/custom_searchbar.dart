@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'app_assets.dart';
 
 class SearchBarClass extends StatelessWidget {
@@ -7,7 +6,7 @@ class SearchBarClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 1.0,
-      color: AppColors.offwhite_color,
+      color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(6.0),
       ),
@@ -19,7 +18,9 @@ class SearchBarClass extends StatelessWidget {
             Expanded(
               child: TextField(
                 decoration: InputDecoration(
-                  border: InputBorder.none, hintText: 'Search My Surveys...',
+                  border: InputBorder.none, hintText: 'Search a transaction...', hintStyle: TextStyle(
+                  fontSize: 12.0
+                )
                 ),
                 onSubmitted: (String vehicle){},
               ),

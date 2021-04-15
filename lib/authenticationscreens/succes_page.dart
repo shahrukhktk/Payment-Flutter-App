@@ -11,8 +11,8 @@ class CongratsPage extends StatelessWidget {
         children: [
 
           Padding(
-            padding: const EdgeInsets.only(top: 20.0, bottom: 20),
-            child: Image(image: AssetImage('images/verificationsuccess.png'),),
+            padding: const EdgeInsets.only(top: 50.0, bottom: 20),
+            child: Image(image: AssetImage('images/verificationsuccess.png'), fit: BoxFit.fill,),
           ),
 
           Padding(
@@ -30,38 +30,42 @@ class CongratsPage extends StatelessWidget {
 
           //Next Btn
           Padding(
-            padding: const EdgeInsets.only(top: 50.0, right: 20, left: 20, bottom: 15),
+            padding: const EdgeInsets.only(top: 100.0, right: 20, left: 20),
             child: GestureDetector(
-              onTap: ()
-              {
+              onTap: () {
                 Navigator.push(context,
                   MaterialPageRoute(builder: (context) => MainScreen()),);
               },
               child: Container(
-                height: 52,
-                width: 300,
-                decoration: const BoxDecoration(
+                height: 48,
+                width: 315,
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end:
-                    Alignment(0.8, 0.0), // 10% of the width, so there are ten blinds.
+                    Alignment(0.8, 0.0),
+                    // 10% of the width, so there are ten blinds.
                     colors: <Color>[
                       Color(0xff003CBE),
                       Color(0xffFF9900)
                     ],
                   ),
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: Center(
                   child: Text(
-                    "Go to Home",
+                    "Go To Home",
                     style: TextStyle(
-                        fontSize: 16.0, fontFamily: 'Poppins', color: Colors.white
+                        fontSize: 16.0,
+                        fontFamily: 'Poppins',
+                        color: Colors.white
                     ),
                   ),
                 ),
               ),
             ),
           ),
+
 
         ],
       ),

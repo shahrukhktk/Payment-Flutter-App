@@ -53,38 +53,42 @@ class _PickUserNamePageState extends State<PickUserNamePage> {
 
           //Next Btn
           Padding(
-            padding: const EdgeInsets.only(top: 40.0, right: 20, left: 20),
+            padding: const EdgeInsets.only(top: 150.0, right: 20, left: 20),
             child: GestureDetector(
-              onTap: ()
-              {
+              onTap: () {
                 Navigator.push(context,
                   MaterialPageRoute(builder: (context) => SelectCountryPage()),);
               },
               child: Container(
-                height: 52,
-                width: 300,
-                decoration: const BoxDecoration(
+                height: 48,
+                width: 315,
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end:
-                    Alignment(0.8, 0.0), // 10% of the width, so there are ten blinds.
+                    Alignment(0.8, 0.0),
+                    // 10% of the width, so there are ten blinds.
                     colors: <Color>[
                       Color(0xff003CBE),
                       Color(0xffFF9900)
                     ],
                   ),
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: Center(
                   child: Text(
                     "Next",
                     style: TextStyle(
-                        fontSize: 16.0, fontFamily: 'Poppins', color: Colors.white
+                        fontSize: 16.0,
+                        fontFamily: 'Poppins',
+                        color: Colors.white
                     ),
                   ),
                 ),
               ),
             ),
           ),
+
 
         ],
       ),

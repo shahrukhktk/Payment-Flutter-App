@@ -63,16 +63,16 @@ class _PhonePageState extends State<PhonePage> {
 
           //Next Btn
           Padding(
-            padding: const EdgeInsets.only(top: 40.0, right: 20, left: 20),
+            padding: const EdgeInsets.only(top: 150.0, right: 20, left: 20),
             child: GestureDetector(
               onTap: () {
                 Navigator.push(context,
                   MaterialPageRoute(builder: (context) => OTPCodeVerification()),);
               },
               child: Container(
-                height: 52,
-                width: 300,
-                decoration: const BoxDecoration(
+                height: 48,
+                width: 315,
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end:
@@ -83,6 +83,7 @@ class _PhonePageState extends State<PhonePage> {
                       Color(0xffFF9900)
                     ],
                   ),
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: Center(
                   child: Text(
@@ -97,6 +98,7 @@ class _PhonePageState extends State<PhonePage> {
               ),
             ),
           ),
+
 
         ],
       ),

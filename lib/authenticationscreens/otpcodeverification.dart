@@ -322,16 +322,16 @@ class _OTPCodeVerificationState extends State<OTPCodeVerification> {
 
                 //Next Btn
                 Padding(
-                  padding: const EdgeInsets.only(top: 40.0, right: 20, left: 20),
+                  padding: const EdgeInsets.only(top: 50.0),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(context,
                         MaterialPageRoute(builder: (context) => UsernamePage()),);
                     },
                     child: Container(
-                      height: 52,
-                      width: 335,
-                      decoration: const BoxDecoration(
+                      height: 48,
+                      width: 330,
+                      decoration: BoxDecoration(
                         gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end:
@@ -342,6 +342,7 @@ class _OTPCodeVerificationState extends State<OTPCodeVerification> {
                             Color(0xffFF9900)
                           ],
                         ),
+                        borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
                         child: Text(
@@ -356,6 +357,9 @@ class _OTPCodeVerificationState extends State<OTPCodeVerification> {
                     ),
                   ),
                 ),
+
+
+
 
               ],
             ), flex: 80,),

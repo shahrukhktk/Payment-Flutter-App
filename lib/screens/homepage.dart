@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:payment_app/constant/app_assets.dart';
 import 'package:payment_app/constant/custom_listtile.dart';
+import 'package:payment_app/screens/requestpage.dart';
+import 'package:payment_app/screens/pay_page.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -113,8 +116,7 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           height: 40,
                           width: 120,
-                          decoration: const BoxDecoration(
-
+                          decoration: BoxDecoration(
                             gradient: LinearGradient(
                               begin: Alignment.topLeft,
                               end:
@@ -125,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                                 Color(0xffFF9900)
                               ],
                             ),
-                            // borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                           child: Center(
                             child: Text(
@@ -190,7 +192,7 @@ class _HomePageState extends State<HomePage> {
             color: Colors.grey,
           ),
 
-          //Back Btn
+          //btns
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -210,8 +212,8 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.all(8.0),
 
                     onPressed: () {
-                      // Navigator.push(context,
-                      //   MaterialPageRoute(builder: (context) => NewAppointmentPage()),);
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => RequestPage()),);
                     },
                     child: Text(
                       "Request",
@@ -228,8 +230,8 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(top: 100.0),
                 child: GestureDetector(
                   onTap: () {
-                    // Navigator.push(context,
-                    //   MaterialPageRoute(builder: (context) => OTPCodeVerification()),);
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => PaymentPage()),);
                   },
                   child: Container(
                     height: 48,

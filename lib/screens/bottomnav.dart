@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:payment_app/authenticationscreens/naming_page.dart';
-import 'package:payment_app/authenticationscreens/pickusername_page.dart';
-import 'package:payment_app/authenticationscreens/succes_page.dart';
 import 'package:payment_app/constant/app_assets.dart';
+import 'package:payment_app/screens/activitiespage.dart';
+import 'package:payment_app/screens/accountpage.dart';
 import 'package:payment_app/screens/homepage.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -12,8 +11,8 @@ class MainScreen extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       HomePage(),
-      PickUserNamePage(),
-      CongratsPage(),
+      ActivitiesPage(),
+      AccountPage(),
     ];
   }
 

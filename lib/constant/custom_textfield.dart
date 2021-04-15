@@ -193,3 +193,39 @@ class DateEd extends StatelessWidget {
     return dateTxtField;
   }
 }
+
+class ToText extends StatelessWidget {
+
+  final String text;
+  ToText({this.text});
+
+  @override
+  Widget build(BuildContext context) {
+
+    final userTxtId = TextFormField(
+        keyboardType: TextInputType.name,
+        decoration: InputDecoration(
+          hoverColor: AppColors.primary_color,
+          focusColor: AppColors.primary_color,
+          labelText: text,
+          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          fillColor: AppColors.primary_color,
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12.0),
+            borderSide: BorderSide(
+              color: AppColors.primary_color,
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12.0),
+            borderSide: BorderSide(
+              color: AppColors.primary_color,
+              width: 1.0,
+            ),
+          ),
+        )
+    );
+
+    return userTxtId;
+  }
+}
