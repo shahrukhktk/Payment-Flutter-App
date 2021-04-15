@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:payment_app/constant/app_assets.dart';
 import 'package:payment_app/screens/settingpage.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:payment_app/constant/custom_listtile.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -9,9 +11,14 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
+  bool isToggled = false;
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+      backgroundColor: AppColors.background_color,
       body: ListView(
         padding: EdgeInsets.all(20),
         children: [
@@ -47,7 +54,7 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 50, bottom: 20),
+            padding: const EdgeInsets.only(top: 30, bottom: 20),
             child: Image(image: AssetImage('images/je.png'), height: 150,),
           ),
 
@@ -75,17 +82,82 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Padding(
               padding: const EdgeInsets.only(top: 40.0),
               child: Container(
-                height: 80,
+                height: 70,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Card(
-                  shadowColor: Colors.grey,
-                  elevation: 1,
-                  child: Center(
-                    child: usernameListItem(title: "User Name", subtitle: "Jessi_jones123",),
-                  ),
+                child: Center(
+                  child: usernameListItem(title: "User Name", subtitle: "Jessi_jones123",),
+                ),
+              ),
+            ),
+          ),
+
+          GestureDetector(
+            onTap: ()
+            {
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ProfilePage()),);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15.0),
+              child: Container(
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Center(
+                  child: bioListItem(title: "Bio",),
+                ),
+              ),
+            ),
+          ),
+
+          GestureDetector(
+            onTap: ()
+            {
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ProfilePage()),);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15.0),
+              child: Container(
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 15.0, right: 15),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Public', style: TextStyle(
+                            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black
+                        ),),
+
+                        FlutterSwitch(
+                          height: 30.0,
+                          width: 60.0,
+                          padding: 4.0,
+                          toggleSize: 30.0,
+                          borderRadius: 25.0,
+                          activeColor: AppColors.primary_color,
+                          value: isToggled,
+                          onToggle: (value) {
+                            setState(() {
+                              isToggled = value;
+                            });
+                          },
+                        ),
+
+                      ],
+                    ),
+                  )
                 ),
               ),
             ),
@@ -93,7 +165,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
           //Back Btn
           Padding(
-            padding: const EdgeInsets.only(top: 200.0),
+            padding: const EdgeInsets.only(top: 60.0),
             child: GestureDetector(
               onTap: () {
                 // Navigator.push(context,
@@ -117,7 +189,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 child: Center(
                   child: Text(
-                    "Next",
+                    "Share",
                     style: TextStyle(
                         fontSize: 16.0,
                         fontFamily: 'Poppins',
