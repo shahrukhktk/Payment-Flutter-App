@@ -4,6 +4,7 @@ import 'package:payment_app/constant/app_assets.dart';
 import 'package:payment_app/screens/activitiespage.dart';
 import 'package:payment_app/screens/accountpage.dart';
 import 'package:payment_app/screens/homepage.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class MainScreen extends StatelessWidget {
@@ -19,20 +20,20 @@ class MainScreen extends StatelessWidget {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.home),
+        icon: SvgPicture.asset('assets/icons/ic_home.svg', color: AppColors.primary_color,),
         title: ("Home"),
         activeColorPrimary: AppColors.primary_color,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.time),
+        icon: Icon(CupertinoIcons.time, color: AppColors.primary_color,),
         title: ("Activites"),
         activeColorPrimary: AppColors.primary_color,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
 
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.person),
+        icon: Icon(CupertinoIcons.person, color: AppColors.primary_color,),
         title: ("Account"),
         activeColorPrimary: AppColors.primary_color,
         inactiveColorPrimary: CupertinoColors.systemGrey,

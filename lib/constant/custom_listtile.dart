@@ -91,7 +91,7 @@ class profileListItem extends StatelessWidget {
     final listItem = ListTile(
       leading: Image(image: AssetImage('images/profile_ic.png'),),
       title: Text('$title', style: TextStyle(
-          fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black
+          fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
       ),),
 
       trailing: Image(image: AssetImage('images/go_ic.png'),)
@@ -112,7 +112,7 @@ class personalInfoListItem extends StatelessWidget {
     final listItem = ListTile(
         leading: Image(image: AssetImage('images/personalinfo_ic.png'),),
         title: Text('$title', style: TextStyle(
-            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black
+            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
         ),),
 
         trailing: Image(image: AssetImage('images/go_ic.png'),)
@@ -133,7 +133,7 @@ class LimitsListItem extends StatelessWidget {
     final listItem = ListTile(
         leading: Image(image: AssetImage('images/limits_ic.png'),),
         title: Text('$title', style: TextStyle(
-            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black
+            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
         ),),
 
         trailing: Image(image: AssetImage('images/go_ic.png'),)
@@ -154,7 +154,7 @@ class PaymentMethodListItem extends StatelessWidget {
     final listItem = ListTile(
         leading: Image(image: AssetImage('images/paymentmethod_ic.png'),),
         title: Text('$title', style: TextStyle(
-            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black
+            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
         ),),
 
         trailing: Image(image: AssetImage('images/go_ic.png'),)
@@ -175,7 +175,7 @@ class LegalListItem extends StatelessWidget {
     final listItem = ListTile(
         leading: Image(image: AssetImage('images/legal_ic.png'),),
         title: Text('$title', style: TextStyle(
-            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black
+            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
         ),),
 
         trailing: Image(image: AssetImage('images/go_ic.png'),)
@@ -196,7 +196,7 @@ class HelpListItem extends StatelessWidget {
     final listItem = ListTile(
         leading: Image(image: AssetImage('images/help_ic.png'),),
         title: Text('$title', style: TextStyle(
-            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black
+            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
         ),),
 
         trailing: Image(image: AssetImage('images/go_ic.png'),)
@@ -217,7 +217,7 @@ class LogoutListItem extends StatelessWidget {
     final listItem = ListTile(
         leading: Image(image: AssetImage('images/logout_ic.png'),),
         title: Text('$title', style: TextStyle(
-            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.red
+            fontSize: 14.0, fontFamily: 'Poppins', color: Colors.red, fontWeight: FontWeight.w500
         ),),
 
         trailing: Image(image: AssetImage('images/go_ic.png'),)
@@ -240,7 +240,7 @@ class usernameListItem extends StatelessWidget {
     final listItem = ListTile(
         leading: Image(image: AssetImage('images/profile_ic.png'),),
         title: Text('$title', style: TextStyle(
-            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black
+            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
         ),),
         subtitle: Text('$subtitle', style: TextStyle(
             fontSize: 12.0, fontFamily: 'Poppins', color: Colors.black45
@@ -264,7 +264,97 @@ class bioListItem extends StatelessWidget {
     final listItem = ListTile(
         leading: Image(image: AssetImage('images/bio.png'),),
         title: Text('$title', style: TextStyle(
-            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black
+            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
+        ),),
+        trailing: Image(image: AssetImage('images/go_ic.png'),)
+    );
+
+    return listItem;
+  }
+}
+
+// Personal Info ListItems
+
+class EmailListItem extends StatelessWidget {
+
+  final String title , subtitle;
+  EmailListItem({this.title, this.subtitle});
+
+  @override
+  Widget build(BuildContext context) {
+
+    final listItem = ListTile(
+        leading: SvgPicture.asset('assets/icons/email_ic.svg'),
+        title: Text('$title', style: TextStyle(
+            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
+        ),),
+        subtitle: Text('$subtitle', style: TextStyle(
+            fontSize: 12.0, fontFamily: 'Poppins', color: Colors.black45
+        ),),
+        trailing: Image(image: AssetImage('images/go_ic.png'),)
+    );
+
+    return listItem;
+  }
+}
+
+class PhoneListItem extends StatelessWidget {
+
+  final String title , subtitle;
+  PhoneListItem({this.title, this.subtitle});
+
+  @override
+  Widget build(BuildContext context) {
+
+    final listItem = ListTile(
+        leading: SvgPicture.asset('assets/icons/ic_phone.svg'),
+        title: Text('$title', style: TextStyle(
+            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
+        ),),
+        subtitle: Text('$subtitle', style: TextStyle(
+            fontSize: 12.0, fontFamily: 'Poppins', color: Colors.black45
+        ),),
+        trailing: Image(image: AssetImage('images/go_ic.png'),)
+    );
+
+    return listItem;
+  }
+}
+
+// Support Listitems
+
+class FaqListItem extends StatelessWidget {
+
+  final String title;
+  FaqListItem({this.title,});
+
+  @override
+  Widget build(BuildContext context) {
+
+    final listItem = ListTile(
+        leading: SvgPicture.asset('assets/icons/faq_ic.svg'),
+        title: Text('$title', style: TextStyle(
+            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
+        ),),
+        trailing: Image(image: AssetImage('images/go_ic.png'),)
+    );
+
+    return listItem;
+  }
+}
+
+class CustomerSupportListItem extends StatelessWidget {
+
+  final String title;
+  CustomerSupportListItem({this.title});
+
+  @override
+  Widget build(BuildContext context) {
+
+    final listItem = ListTile(
+        leading: SvgPicture.asset('assets/icons/customersupport_ic.svg'),
+        title: Text('$title', style: TextStyle(
+            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black, fontWeight: FontWeight.w500
         ),),
         trailing: Image(image: AssetImage('images/go_ic.png'),)
     );

@@ -5,12 +5,12 @@ import 'package:payment_app/screens/settingpage.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:payment_app/constant/custom_listtile.dart';
 
-class ProfilePage extends StatefulWidget {
+class PersonalInformationPage extends StatefulWidget {
   @override
-  _ProfilePageState createState() => _ProfilePageState();
+  _PersonalInformationPageState createState() => _PersonalInformationPageState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _PersonalInformationPageState extends State<PersonalInformationPage> {
 
   bool isToggled = false;
 
@@ -39,9 +39,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: Image(image: AssetImage('images/ic_back.png'),)),
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 100.0),
+                  padding: const EdgeInsets.only(left: 50.0),
                   child: Text(
-                    "Profile",
+                    "Personal Information",
                     style: TextStyle(
                         fontSize: 20.0, fontFamily: 'Poppins',
                         color: Colors.black, fontWeight: FontWeight.bold
@@ -53,31 +53,13 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.only(top: 30, bottom: 20),
-            child: Image(image: AssetImage('images/je.png'), height: 150,),
-          ),
 
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "Your payment ID here",
-                style: TextStyle(
-                    fontSize: 18.0, fontFamily: 'Poppins',
-                    color: Colors.black, fontWeight: FontWeight.w400
-                ),
-              ),
-
-            ],
-          ),
 
           GestureDetector(
             onTap: ()
             {
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProfilePage()),);
+              // Navigator.push(context,
+              //   MaterialPageRoute(builder: (context) => ProfilePage()),);
             },
             child: Padding(
               padding: const EdgeInsets.only(top: 40.0),
@@ -97,8 +79,8 @@ class _ProfilePageState extends State<ProfilePage> {
           GestureDetector(
             onTap: ()
             {
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProfilePage()),);
+              // Navigator.push(context,
+              //   MaterialPageRoute(builder: (context) => ProfilePage()),);
             },
             child: Padding(
               padding: const EdgeInsets.only(top: 15.0),
@@ -109,7 +91,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Center(
-                  child: bioListItem(title: "Bio",),
+                  child: EmailListItem(title: "Email", subtitle: "Jessijones123@gmail.com",),
                 ),
               ),
             ),
@@ -118,8 +100,8 @@ class _ProfilePageState extends State<ProfilePage> {
           GestureDetector(
             onTap: ()
             {
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProfilePage()),);
+              // Navigator.push(context,
+              //   MaterialPageRoute(builder: (context) => ProfilePage()),);
             },
             child: Padding(
               padding: const EdgeInsets.only(top: 15.0),
@@ -130,42 +112,17 @@ class _ProfilePageState extends State<ProfilePage> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 15.0, right: 15),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Public', style: TextStyle(
-                            fontSize: 15.0, fontFamily: 'Poppins', color: Colors.black
-                        ),),
-
-                        FlutterSwitch(
-                          height: 30.0,
-                          width: 60.0,
-                          padding: 4.0,
-                          toggleSize: 30.0,
-                          borderRadius: 25.0,
-                          activeColor: AppColors.primary_color,
-                          value: isToggled,
-                          onToggle: (value) {
-                            setState(() {
-                              isToggled = value;
-                            });
-                          },
-                        ),
-
-                      ],
-                    ),
-                  )
+                  child: PhoneListItem(title: "Phone", subtitle: "+1 301 908 70",),
                 ),
               ),
             ),
           ),
 
+
+
           //Share Btn
           Padding(
-            padding: const EdgeInsets.only(top: 60.0),
+            padding: const EdgeInsets.only(top: 200.0),
             child: GestureDetector(
               onTap: () {
                 // Navigator.push(context,
@@ -189,7 +146,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 child: Center(
                   child: Text(
-                    "Share",
+                    "Contact Support",
                     style: TextStyle(
                         fontSize: 16.0,
                         fontFamily: 'Poppins',

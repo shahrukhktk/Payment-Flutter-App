@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:payment_app/authenticationscreens/pickusername_page.dart';
+import 'package:payment_app/constant/app_assets.dart';
 import 'package:payment_app/screens/profile_page.dart';
 import 'package:payment_app/constant/custom_listtile.dart';
+import 'package:payment_app/screens/personalInfo_page.dart';
+import 'package:payment_app/screens/limits_page.dart';
+
 
 class SettingPage extends StatefulWidget {
   @override
@@ -12,6 +17,7 @@ class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background_color,
       body: ListView(
         padding: EdgeInsets.all(20),
         children: [
@@ -49,36 +55,35 @@ class _SettingPageState extends State<SettingPage> {
             child: Padding(
               padding: const EdgeInsets.only(top: 40.0),
               child: Container(
-                height: 80,
+                height: 70,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  child: Card(
-                      shadowColor: Colors.grey,
-                      elevation: 1,
-                      child: Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: profileListItem(title: "Profile",),
-                        ),
-                      ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: profileListItem(title: "Profile",),
+                    ),
                   ),
               ),
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.only(top: 12.0),
-            child: Container(
-              height: 80,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Card(
-                shadowColor: Colors.grey,
-                elevation: 1,
+          GestureDetector(
+            onTap: ()
+            {
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => PersonalInformationPage()),);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12.0),
+              child: Container(
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -89,17 +94,20 @@ class _SettingPageState extends State<SettingPage> {
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.only(top: 12.0),
-            child: Container(
-              height: 80,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Card(
-                shadowColor: Colors.grey,
-                elevation: 1,
+          GestureDetector(
+            onTap: ()
+            {
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => LimitsPage()),);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12.0),
+              child: Container(
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -113,19 +121,15 @@ class _SettingPageState extends State<SettingPage> {
           Padding(
             padding: const EdgeInsets.only(top: 12.0),
             child: Container(
-              height: 80,
+              height: 70,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: Card(
-                shadowColor: Colors.grey,
-                elevation: 1,
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: PaymentMethodListItem(title: "Payment Method",),
-                  ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: PaymentMethodListItem(title: "Payment Method",),
                 ),
               ),
             ),
@@ -134,19 +138,15 @@ class _SettingPageState extends State<SettingPage> {
           Padding(
             padding: const EdgeInsets.only(top: 12.0),
             child: Container(
-              height: 80,
+              height: 70,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: Card(
-                shadowColor: Colors.grey,
-                elevation: 1,
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: LegalListItem(title: "Legal",),
-                  ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: LegalListItem(title: "Legal",),
                 ),
               ),
             ),
@@ -155,35 +155,34 @@ class _SettingPageState extends State<SettingPage> {
           Padding(
             padding: const EdgeInsets.only(top: 12.0),
             child: Container(
-              height: 80,
+              height: 70,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: Card(
-                shadowColor: Colors.grey,
-                elevation: 1,
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: HelpListItem(title: "Help",),
-                  ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: HelpListItem(title: "Help",),
                 ),
               ),
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.only(top: 12.0),
-            child: Container(
-              height: 80,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Card(
-                shadowColor: Colors.grey,
-                elevation: 1,
+          GestureDetector(
+            onTap: ()
+            {
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => PickUserNamePage()),);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12.0),
+              child: Container(
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
