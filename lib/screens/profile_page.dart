@@ -76,8 +76,8 @@ class _ProfilePageState extends State<ProfilePage> {
           GestureDetector(
             onTap: ()
             {
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProfilePage()),);
+              // Navigator.push(context,
+              //   MaterialPageRoute(builder: (context) => ProfilePage()),);
             },
             child: Padding(
               padding: const EdgeInsets.only(top: 40.0),
@@ -97,8 +97,8 @@ class _ProfilePageState extends State<ProfilePage> {
           GestureDetector(
             onTap: ()
             {
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProfilePage()),);
+              // Navigator.push(context,
+              //   MaterialPageRoute(builder: (context) => ProfilePage()),);
             },
             child: Padding(
               padding: const EdgeInsets.only(top: 15.0),

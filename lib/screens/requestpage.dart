@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:payment_app/constant/app_assets.dart';
 import 'package:payment_app/constant/custom_listtile.dart';
 
+import 'homepage.dart';
+
 class RequestPage extends StatefulWidget {
   @override
   _RequestPageState createState() => _RequestPageState();
@@ -23,7 +25,13 @@ class _RequestPageState extends State<RequestPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
 
-                Image(image: AssetImage('images/crossic.png'),),
+                GestureDetector(
+                    onTap: ()
+                    {
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomePage()),);
+                    },
+                    child: Image(image: AssetImage('images/crossic.png'),)),
 
                 Padding(
                   padding: const EdgeInsets.only(left: 100.0),

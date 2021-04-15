@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:payment_app/constant/custom_textfield.dart';
+import 'package:payment_app/screens/homepage.dart';
 
 class PaymentPage extends StatefulWidget {
   @override
@@ -22,7 +23,13 @@ class _PaymentPageState extends State<PaymentPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
 
-                Image(image: AssetImage('images/crossic.png'),),
+                GestureDetector(
+                    onTap: ()
+                    {
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomePage()),);
+                    },
+                    child: Image(image: AssetImage('images/crossic.png'),)),
 
                 Text(
                   "Pay",
@@ -49,42 +56,42 @@ class _PaymentPageState extends State<PaymentPage> {
 
 
           //Back Btn
-          Padding(
-            padding: const EdgeInsets.only(top: 200.0),
-            child: GestureDetector(
-              onTap: () {
-                // Navigator.push(context,
-                //   MaterialPageRoute(builder: (context) => OTPCodeVerification()),);
-              },
-              child: Container(
-                height: 48,
-                width: 315,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end:
-                    Alignment(0.8, 0.0),
-                    // 10% of the width, so there are ten blinds.
-                    colors: <Color>[
-                      Color(0xff003CBE),
-                      Color(0xffFF9900)
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Center(
-                  child: Text(
-                    "Next",
-                    style: TextStyle(
-                        fontSize: 16.0,
-                        fontFamily: 'Poppins',
-                        color: Colors.white
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 200.0),
+          //   child: GestureDetector(
+          //     onTap: () {
+          //       // Navigator.push(context,
+          //       //   MaterialPageRoute(builder: (context) => OTPCodeVerification()),);
+          //     },
+          //     child: Container(
+          //       height: 48,
+          //       width: 315,
+          //       decoration: BoxDecoration(
+          //         gradient: LinearGradient(
+          //           begin: Alignment.topLeft,
+          //           end:
+          //           Alignment(0.8, 0.0),
+          //           // 10% of the width, so there are ten blinds.
+          //           colors: <Color>[
+          //             Color(0xff003CBE),
+          //             Color(0xffFF9900)
+          //           ],
+          //         ),
+          //         borderRadius: BorderRadius.circular(12),
+          //       ),
+          //       child: Center(
+          //         child: Text(
+          //           "Next",
+          //           style: TextStyle(
+          //               fontSize: 16.0,
+          //               fontFamily: 'Poppins',
+          //               color: Colors.white
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
 
 
 
